@@ -49,12 +49,15 @@ It contains labeled email messages where:
 5. The result is displayed to the user
    
 ## How to Run the Project
-1. Clone the repository  
-2. Make sure Python is installed on your system  
-3. Install required libraries using:
-4. pip install pandas numpy scikit-learn
-5. Run the Python file
-python Spam_Email_Detector.py
+How to Run the Project
+
+1. Clone the repository
+2. Make sure Python is installed on your system
+3. Install required libraries:
+   pip install pandas numpy scikit-learn streamlit
+4. Run the application:
+   python -m streamlit run Spam_Email_Detector.py
+
 
 
 ## Output
