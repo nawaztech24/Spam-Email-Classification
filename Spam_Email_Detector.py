@@ -1,14 +1,14 @@
 import pickle
 import streamlit as st
-from win32com.client import Dispatch
-import pythoncom
+import pyttsx3
 from datetime import datetime  # Importing datetime module
 
 # Initialize pyttsx3 for text-to-speech
 def speak(text):
-    pythoncom.CoInitialize() 
-    speak = Dispatch("SAPI.SpVoice")
-    speak.Speak(text)
+    engine = pyttsx3.init()
+    engine.save_to_file(text, "voice.mp3")
+    engine.runAndWait()
+    st.audio("voice.mp3")
 
 # Load model and vectorizer
 model = pickle.load(open("spam.pkl", "rb"))
