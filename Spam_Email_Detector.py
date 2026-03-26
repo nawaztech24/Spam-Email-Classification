@@ -67,7 +67,7 @@ def display_history():
 st.markdown("<h1>Spam Email Detector</h1>", unsafe_allow_html=True)
 st.markdown("<h3>Built by Mohd Nawaz Khan</h3>", unsafe_allow_html=True)
 
-msg = st.text_input("Enter your message")
+msg = st.text_input("Enter your email content here...")
 
 if st.button("Predict"):
     with st.spinner("Analyzing..."):
