@@ -1,5 +1,4 @@
 
-
 # Spam Email Classification System
 
 This project is a Machine Learning-based Spam Email Classification system developed during the AICTE Internship – AI: Transformative Learning with TechSaksham (a joint CSR initiative of Microsoft & SAP, implemented by Edunet Foundation).
