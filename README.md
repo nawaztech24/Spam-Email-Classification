@@ -1,5 +1,5 @@
 
-# Spam Email Classification System
+## Spam Email Classification System
 
 This project is a Machine Learning-based Spam Email Classification system developed during the AICTE Internship – AI: Transformative Learning with TechSaksham (a joint CSR initiative of Microsoft & SAP, implemented by Edunet Foundation).
 
@@ -12,7 +12,7 @@ The system classifies email messages as:
 
 ## Live Demo
 
-https://your-app-link.streamlit.app
+https://spam-email-classifier-nawaz.streamlit.app/
 
 ---
 
@@ -24,81 +24,66 @@ The goal of this project is to build a spam detection system using NLP and Machi
 
 ---
 
-## Technologies Used
+Features
+Real-time spam detection
+Displays prediction confidence score
+Interactive UI using Streamlit
+NLP-based machine learning model
+Deployed on Streamlit Cloud
 
-- Python  
-- Pandas  
-- NumPy  
-- Scikit-learn  
-- Streamlit  
-- Pickle  
-
-### Machine Learning Components
-
-- CountVectorizer (Text Feature Extraction)  
-- Multinomial Naive Bayes Classifier  
 
 ---
-
-## Features
-
-- Real-time spam detection  
-- Confidence score for predictions  
-- Dark-themed user interface  
-- Text-to-speech feedback  
-- Session-based history tracking  
+## Tech Stack
+Python
+Streamlit
+Scikit-learn
+Pandas
+NumPy
+gTTS
 
 ---
-
 ## Project Structure
-
-Spam_Email_Detector.py  
-Spam Email.ipynb  
-train_model.py  
-spam.csv  
-spam.pkl  
-vectorizer.pkl  
-style.css  
-background.jpg  
-
----
-
-## How It Works
-
-1. User enters email text  
-2. Text is converted into numerical vectors using CountVectorizer  
-3. The trained Naive Bayes model predicts the class  
-4. The result is displayed as Spam or Ham  
-5. Prediction history is maintained during the session  
+Spam-Email-Classification/
+│── __pycache__/
+│── assets/
+│── background.jpg
+│── README.md
+│── requirements.txt
+│── Spam Email.ipynb
+│── Spam_Email_Detector.py
+│── spam.csv
+│── spam.pkl
+│── vectorizer.pkl
+│── train_model.py
 
 ---
-
-## How to Run
-
-Install required libraries:
-
-pip install pandas numpy scikit-learn streamlit gtts
-
-Run the application:
-
+## How to Run Locally
+git clone https://github.com/nawaztech24/Spam-Email-Classification.git
+cd Spam-Email-Classification
+pip install -r requirements.txt
 streamlit run Spam_Email_Detector.py
 
 ---
+## Screenshots
+### Home Page
+![Home](assets/home.png)
 
-## Model Information
+### Spam Prediction
+![Spam](assets/spam%20email.png)
 
-- Algorithm: Multinomial Naive Bayes  
-- Text Vectorization: CountVectorizer  
-- Accuracy: (Add your result from notebook here)  
+### Ham Prediction
+![Ham](assets/ham%20email.png)
 
----
+### History Page
+![History](assets/history.png)
 
-## Future Improvements
+--- 
 
-- Improve model accuracy  
-- Use TF-IDF vectorization  
-- Try advanced models (Logistic Regression / Deep Learning)  
-- Deploy as a scalable web application  
+## Model Details
+Algorithm: Naive Bayes
+Text preprocessing using NLP techniques
+Trained on labeled dataset (spam.csv)
+Model saved using pickle (spam.pkl, vectorizer.pkl)
 
 ---
 
@@ -106,4 +91,11 @@ streamlit run Spam_Email_Detector.py
 
 Mohd Nawaz Khan
 
+---
 
+## Future Improvements
+
+Improve model accuracy with advanced algorithms
+Add email API integration
+Enhance UI/UX design
+Add user authentication
