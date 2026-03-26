@@ -14,6 +14,11 @@ The system classifies email messages as:
 
 https://spam-email-classifier-nawaz.streamlit.app/
 
+## App Preview
+
+![App](assets/app_preview.png)
+
+
 ---
 
 ## 🧠 Problem Statement
@@ -78,15 +83,15 @@ streamlit run Spam_Email_Detector.py
 
 ### Home Page
 
-![Home](assets/home.png)
+![Home](assets/home_page.png)
 
 ### Spam Prediction
 
-![Spam](assets/spam%20email.png)
+![Spam](assets/spam_email.png)
 
 ### Ham Prediction
 
-![Ham](assets/ham%20email.png)
+![Ham](assets/ham_email.png)
 
 ### History Page
 
