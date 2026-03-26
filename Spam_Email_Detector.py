@@ -6,12 +6,14 @@ import base64
 
 st.set_page_config(page_title="Spam Email Detector", page_icon="📧", layout="centered")
 
+# function to convert image into base64 string for background use
 def get_base64_image(path):
     with open(path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
 bg_img = get_base64_image("background.jpg")
 
+# function to convert text to speech and play audio
 def speak(text):
     tts = gTTS(text)
     tts.save("voice.mp3")
@@ -27,6 +29,7 @@ def speak(text):
 model = pickle.load(open("spam.pkl", "rb"))
 cv = pickle.load(open("vectorizer.pkl", "rb"))
 
+# function to predict whether message is spam or ham with confidence
 def predict_message(msg):
     vect = cv.transform([msg]).toarray()
     prediction = model.predict(vect)[0]
@@ -37,6 +40,7 @@ def predict_message(msg):
         confidence = 90
     return ("Spam" if prediction == 1 else "Ham"), round(confidence, 2)
 
+# function to store user message and prediction in session history
 def add_to_history(msg, result):
     if 'history' not in st.session_state:
         st.session_state.history = []
@@ -46,6 +50,7 @@ def add_to_history(msg, result):
         'timestamp': datetime.now()
     })
 
+# function to display stored prediction history
 def display_history():
     if 'history' in st.session_state:
         st.markdown("### History")
@@ -77,7 +82,7 @@ if st.button("Predict"):
 
     add_to_history(msg, result)
     display_history()
-
+# css
 st.markdown(f"""
 <style>
 
